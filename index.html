@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Portfolio</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Reset */
+      body,
+      ul,
+      ol,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      label {
+        padding: 0;
+        margin: 0;
+        border: 0;
+      }
+
+      html {
+        background-color: #222;
+      }
+
+      body {
+        color: rgb(255, 247, 247);
+        font-family: "Gordita";
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 64px;
+        font-weight: 400;
+        margin-bottom: 24px;
+      }
+
+      main {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 128px 96px;
+      }
+
+      .container {
+        position: relative;
+      }
+
+      .left-container {
+        width: 200px;
+        position: absolute;
+        left: 0;
+        top: 116px;
+        bottom: 0;
+      }
+
+      .right-container {
+        padding-left: 200px;
+      }
+
+      .navigation-items {
+        list-style-type: none;
+      }
+
+      .navigation-list-item {
+        margin-bottom: 10px;
+      }
+
+      a {
+        color: white;
+      }
+
+      section {
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+
+      #devin-image {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        float: right;
+        border: 2px solid white;
+        margin-left: 40px;
+        margin-bottom: 40px;
+      }
+
+      ul {
+        list-style-position: inside;
+      }
+
+      form {
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        padding-top: 40px;
+      }
+
+      .form-row {
+        margin-bottom: 20px;
+      }
+
+      .form-row > label {
+        width: 200px;
+        display: inline-block;
+        text-align: right;
+        margin-right: 20px;
+      }
+
+      .form-row > input,
+      .form-row > button,
+      .form-row > select {
+        padding: 8px;
+        border: none;
+        font-size: 18px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 2px;
+        color: white;
+      }
+
+      .form-row > input,
+      .form-row > select {
+        width: 300px;
+      }
+
+      .form-row > select {
+        padding-right: 20px;
+      }
+
+      .form-row > input::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .submit-form-row {
+        padding-left: 220px;
+      }
+
+      .youtube-embed {
+        width: 100%;
+        height: 500px;
+      }
+
+      .magenta {
+        color: #ff4daf;
+      }
+      .violet {
+        color: #ba8ef2;
+      }
+      .teal {
+        color: #5dd1c6;
+      }
+      .aqua {
+        color: #46c6ff;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <nav class="left-container">
+          <ul class="navigation-items">
+            <li class="navigation-list-item">
+              <a href="#about" class="magenta">About</a>
+            </li>
+            <li class="navigation-list-item">
+              <a href="#projects" class="violet">Projects</a>
+            </li>
+            <li class="navigation-list-item">
+              <a href="#videos" class="teal">Videos</a>
+            </li>
+            <li class="navigation-list-item">
+              <a href="#contact" class="aqua">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="right-container">
+          <h1>Welcome</h1>
+          <section>
+            <img
+              id="devin-image"
+              src="./devin.jpg"
+              alt="Devin in front of shrubbery"
+            />
+            <h2 id="about" class="magenta">About</h2>
+            <p>
+              My name is Devin Abbott, and I'm a web & mobile app developer.
+            </p>
+            <p>
+              I primarily work with <strong>React</strong> and
+              <strong>React Native</strong>. Sometimes I write
+              <strong>Swift</strong> — but mainly for macOS, not iOS. Many of my
+              projects are open source.
+            </p>
+          </section>
+          <section>
+            <h2 id="projects" class="violet">Projects</h2>
+            <p>Here are a few open source projects I've worked on:</p>
+            <ul>
+              <li><a href="https://react.express">React Express</a></li>
+              <li>
+                <a href="https://reactnative.express">React Native Express</a>
+              </li>
+              <li><a href="https://javascript.express">JavaScript</a></li>
+              <li><a href="https://typescript.express">TypeScript</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2 id="videos" class="teal">Videos</h2>
+            <p>Sometimes I talk at conferences.</p>
+            <p>Here's a talk I gave at React Europe in 2017:</p>
+            <iframe
+              class="youtube-embed"
+              src="https://www.youtube.com/embed/HVwLOcllTfI"
+            ></iframe>
+          </section>
+          <section>
+            <h2 id="contact" class="aqua">Contact</h2>
+            <p>Want to say hi?</p>
+            <form action="/test">
+              <div class="form-row">
+                <label for="name">Name</label
+                ><input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                />
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label
+                ><input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Your email address"
+                />
+              </div>
+              <div class="form-row">
+                <label for="email">Subject</label
+                ><select name="subject">
+                  <option value="oss">Open source projects</option>
+                  <option value="training">Training sessions</option>
+                  <option value="hello">Just saying hello</option>
+                </select>
+              </div>
+              <div class="form-row submit-form-row">
+                <button>Submit</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
